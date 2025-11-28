@@ -2,49 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shaheer Shakir | Portfolio</title>
+  <title>Shaheer Shakir | Software Engineering Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Shaheer Shakir, a Software Engineering student focused on C/C++, embedded systems, and backend development."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="logo-text">SS</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
     <div class="hero-inner">
       <img src="profile.png?v=2" alt="Photo of Shaheer Shakir" class="avatar" />
 
       <div class="hero-text">
+        <p class="hero-eyebrow">Software Engineering Student @ University of Calgary</p>
         <h1>Shaheer Shakir</h1>
         <p class="subtitle">
-          Software Engineering Student • C/C++ • Embedded Systems • Backend Development
+          I enjoy building in <strong>C/C++</strong>, <strong>embedded systems</strong>, and
+          <strong>backend development</strong>. I care about clean code, performance, and
+          learning from real projects.
         </p>
-        <div class="hero-links">
-          <a href="https://github.com/Shaheer12345678" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/muhammad-shaheer-shakir-1722a430b/" target="_blank">LinkedIn</a>
-          <a href="#contact">Contact</a>
+        <div class="hero-actions">
+          <a href="https://github.com/Shaheer12345678" target="_blank" class="btn primary">
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/muhammad-shaheer-shakir-1722a430b/"
+            target="_blank"
+            class="btn secondary"
+          >
+            LinkedIn
+          </a>
+          <a href="#projects" class="btn ghost">View Projects</a>
+          <!-- Optional: once you have a resume.pdf in this repo, uncomment this:
+          <a href="resume.pdf" target="_blank" class="btn secondary">Download Resume</a>
+          -->
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <main>
     <!-- About -->
     <section id="about" class="section">
-      <h2>About Me</h2>
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
       <p>
-        I'm a Software Engineering student who enjoys building projects in
-        <strong>C/C++</strong>, <strong>embedded systems</strong>, and
-        <strong>backend development</strong>. I like working on low-level drivers,
-        performance profiling tools, and backend services that solve real problems.
+        I'm a Software Engineering student who likes working close to the metal in
+        <strong>C/C++</strong> and <strong>embedded systems</strong>, as well as building
+        <strong>backend services</strong> and small tools that solve practical problems.
       </p>
       <p>
-        This portfolio highlights some of my favourite projects, including a C++ log
-        profiler, a student records REST API, and embedded work on microcontrollers
-        like the PIC24 and Raspberry Pi Pico.
+        On this site, I’ve highlighted a few projects that show how I approach performance,
+        reliability, and clean design&mdash;from log profiling tools and REST APIs to UART
+        drivers and Raspberry Pi Pico projects.
       </p>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <h2>Skills</h2>
+      <div class="section-header">
+        <h2>Skills</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="chip-row">
         <span class="chip">C</span>
         <span class="chip">C++</span>
@@ -55,13 +90,18 @@
         <span class="chip">Linux / WSL</span>
         <span class="chip">OOP &amp; Design Patterns</span>
         <span class="chip">Embedded Systems</span>
+        <span class="chip">Microcontrollers (PIC24, Pico)</span>
         <span class="chip">REST APIs</span>
+        <span class="chip">Unit Testing &amp; CI</span>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <div class="section-header">
+        <h2>Projects</h2>
+        <div class="section-line"></div>
+      </div>
 
       <div class="card-grid">
         <!-- Project 1 -->
@@ -70,7 +110,7 @@
           <p>
             C++ command-line tool to parse large log files and compute statistics such as
             top-K error messages and latency histograms. Includes an RAII-scoped timer to
-            profile hot paths and uses modern C++ features like <code>std::string_view</code>.
+            profile hot paths and uses <code>std::string_view</code> for efficient parsing.
           </p>
           <p class="tech-used">C++17 · CMake · Performance Profiling</p>
           <a class="card-link"
@@ -82,11 +122,11 @@
         <article class="card">
           <h3>Student Records REST API</h3>
           <p>
-            REST API for managing student records with CRUD endpoints, routing, and
-            controller separation. Built to practice backend design, JSON handling,
-            and clean code structure.
+            REST API for managing student records with CRUD endpoints, routing, and controller
+            separation. Built to practice backend design, JSON handling, and a clean project
+            structure that can be extended with a database.
           </p>
-          <p class="tech-used">Python · Flask (or your framework) · REST · JSON</p>
+          <p class="tech-used">Python · Flask (or framework used) · REST · JSON</p>
           <a class="card-link"
              href="https://github.com/Shaheer12345678/Student-Records-REST-API-Course-Project"
              target="_blank">View on GitHub</a>
@@ -96,8 +136,9 @@
         <article class="card">
           <h3>PIC24F UART Driver (Ring Buffer)</h3>
           <p>
-            Embedded C UART driver for the PIC24F microcontroller using interrupts and
-            a circular ring buffer for reliable, non-blocking serial communication.
+            Embedded C UART driver for the PIC24F microcontroller using interrupts and a
+            circular ring buffer for non-blocking serial communication. Focused on reliability
+            and predictable behavior.
           </p>
           <p class="tech-used">C · PIC24F · Interrupts · Embedded</p>
           <a class="card-link"
@@ -110,7 +151,8 @@
           <h3>Pico PIO NeoPixel LED Ring</h3>
           <p>
             Raspberry Pi Pico project controlling a NeoPixel LED ring using the PIO
-            co-processor. Implements custom LED patterns and timing-sensitive control.
+            co-processor. Implements custom LED patterns and timing-sensitive control for
+            smooth animations.
           </p>
           <p class="tech-used">C / C++ · Raspberry Pi Pico · PIO · NeoPixel</p>
           <a class="card-link"
@@ -123,7 +165,8 @@
           <h3>CI for C &amp; Python Repos</h3>
           <p>
             Reusable GitHub Actions workflow that builds and tests C and Python projects
-            on every push. Makes it easy to add continuous integration to new repositories.
+            on every push. Makes it easy to add continuous integration to new repositories
+            with minimal setup.
           </p>
           <p class="tech-used">GitHub Actions · CI · C · Python</p>
           <a class="card-link"
@@ -135,8 +178,9 @@
         <article class="card">
           <h3>Python Refresher Lab</h3>
           <p>
-            A small collection of Python exercises reviewing variables, loops, functions,
-            and basic algorithms. Used to solidify fundamentals and warm up for larger projects.
+            A small collection of Python exercises that review variables, loops, functions,
+            and basic algorithms. Used as a warm-up and fundamentals check before larger
+            projects.
           </p>
           <p class="tech-used">Python · Fundamentals</p>
           <a class="card-link"
@@ -148,7 +192,10 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <div class="section-header">
+        <h2>Contact</h2>
+        <div class="section-line"></div>
+      </div>
       <p>
         The best way to reach me is through LinkedIn or GitHub.
       </p>
