@@ -106,6 +106,8 @@ body {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  /* Optional: if your hair/top gets cropped weirdly, tweak this: */
+  /* object-position: center 20%; */
   border: 3px solid var(--accent);
   box-shadow: var(--shadow-soft);
 }
