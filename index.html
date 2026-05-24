@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Portfolio of Shaheer Shakir, a Software Engineering student focused on C/C++, embedded systems, and backend development."
+    content="Portfolio of Shaheer Shakir, a Software Engineering student focused on backend services, full-stack applications, and embedded systems."
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,9 +32,7 @@
         <p class="hero-eyebrow">Software Engineering Student @ University of Calgary</p>
         <h1>Shaheer Shakir</h1>
         <p class="subtitle">
-          I enjoy building in <strong>C/C++</strong>, <strong>embedded systems</strong>, and
-          <strong>backend development</strong>. I care about clean code, performance, and
-          learning from real projects.
+          Software Engineering student building backend services, full-stack applications, and embedded systems. I care about clean code, performance, and learning from real projects.
         </p>
         <div class="hero-actions">
           <a href="https://github.com/Shaheer12345678" target="_blank" class="btn primary">
@@ -64,14 +62,7 @@
         <div class="section-line"></div>
       </div>
       <p>
-        I'm a Software Engineering student who likes working close to the metal in
-        <strong>C/C++</strong> and <strong>embedded systems</strong>, as well as building
-        <strong>backend services</strong> and small tools that solve practical problems.
-      </p>
-      <p>
-        On this site, I’ve highlighted a few projects that show how I approach performance,
-        reliability, and clean design—from log profiling tools and REST APIs to UART drivers
-        and Raspberry Pi Pico projects.
+        I'm a Software Engineering student who likes building things end-to-end - backend services, full-stack web applications, and embedded firmware. I care about clean design, performance, and shipping work that actually runs.
       </p>
     </section>
 
@@ -106,6 +97,38 @@
 
       <div class="card-grid">
         <article class="card">
+          <h3>FootPrint - Geospatial Routing Platform</h3>
+          <p>
+            Geospatial routing platform for Calgary that ingests 167K+ city records - streetlights, traffic incidents, collisions, tree canopy, transit, and slope data - and serves ranked routes across four modes (eco, accessibility, safety, hybrid) at 1.5-4 second end-to-end latency. Built the custom routing engine, PostgreSQL data layer with Prisma schema modeling, and the data integration layer that normalized multi-source city data into staging tables.
+          </p>
+          <p class="tech-used">TypeScript · Next.js · Node.js · PostgreSQL · Prisma · Docker · Mapbox</p>
+        </article>
+
+        <article class="card">
+          <h3>VisionAid - ML Classification Pipeline</h3>
+          <p>
+            Machine learning pipeline for face-shape classification. Extracts 136 facial landmarks via Haar cascade + LBF, derives 16 geometric ratio features across 493 preprocessed images, and benchmarks four classifiers (Logistic Regression, SVM, Random Forest, KNN) with GridSearchCV and stratified cross-validation. Final model achieves 62.6% test accuracy across five balanced classes - 3.1x random baseline.
+          </p>
+          <p class="tech-used">Python · scikit-learn · OpenCV · pandas · NumPy</p>
+        </article>
+
+        <article class="card">
+          <h3>EcoCity Builder - Full-Stack Urban Simulation</h3>
+          <p>
+            Deployed full-stack turn-based urban-planning simulation with a 15-turn arc, six city metrics, build-prerequisite tree, and S-F tier scoring engine. Handled 50+ concurrent users during a live class demo accessed via QR code. Owned core game engine logic, scoring system, and leaderboard ranking.
+          </p>
+          <p class="tech-used">TypeScript · Next.js · Express · Node.js · PostgreSQL · Docker</p>
+        </article>
+
+        <article class="card">
+          <h3>Careermaxxing - AI Interview Practice Platform</h3>
+          <p>
+            Full-stack AI interview practice platform with FastAPI backend, Pydantic schemas, and rule-based scoring engine for filler-word detection, speech pacing, and STAR-response structure evaluation. Built REST APIs, session management, and resume/job-description parsing layer with extensible hooks for LLM integration.
+          </p>
+          <p class="tech-used">Python · FastAPI · React · Pydantic · REST APIs</p>
+        </article>
+
+        <article class="card">
           <h3>cpp-log-profiler</h3>
           <p>
             C++ command-line tool to parse large log files and compute statistics such as
@@ -119,19 +142,6 @@
         </article>
 
         <article class="card">
-          <h3>Student Records REST API</h3>
-          <p>
-            REST API for managing student records with CRUD endpoints, routing, and controller
-            separation. Built to practice backend design, JSON handling, and a clean project
-            structure that can be extended with a database.
-          </p>
-          <p class="tech-used">Python · Flask (or framework used) · REST · JSON</p>
-          <a class="card-link"
-             href="https://github.com/Shaheer12345678/Student-Records-REST-API-Course-Project"
-             target="_blank">View on GitHub</a>
-        </article>
-
-        <article class="card">
           <h3>PIC24F UART Driver (Ring Buffer)</h3>
           <p>
             Embedded C UART driver for the PIC24F microcontroller using interrupts and a
@@ -141,45 +151,6 @@
           <p class="tech-used">C · PIC24F · Interrupts · Embedded</p>
           <a class="card-link"
              href="https://github.com/Shaheer12345678/PIC24F-UART-Driver-Ring-Buffer-ENSF-lab"
-             target="_blank">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <h3>Pico PIO NeoPixel LED Ring</h3>
-          <p>
-            Raspberry Pi Pico project controlling a NeoPixel LED ring using the PIO
-            co-processor. Implements custom LED patterns and timing-sensitive control for
-            smooth animations.
-          </p>
-          <p class="tech-used">C / C++ · Raspberry Pi Pico · PIO · NeoPixel</p>
-          <a class="card-link"
-             href="https://github.com/Shaheer12345678/Raspberry-Pi-Pico-PIO-Neopixel-LED-Ring"
-             target="_blank">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <h3>CI for C &amp; Python Repos</h3>
-          <p>
-            Reusable GitHub Actions workflow that builds and tests C and Python projects
-            on every push. Makes it easy to add continuous integration to new repositories
-            with minimal setup.
-          </p>
-          <p class="tech-used">GitHub Actions · CI · C · Python</p>
-          <a class="card-link"
-             href="https://github.com/Shaheer12345678/CI-For-C-Python-Repos-Reusable-Template"
-             target="_blank">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <h3>Python Refresher Lab</h3>
-          <p>
-            A small collection of Python exercises that review variables, loops, functions,
-            and basic algorithms. Used as a warm-up and fundamentals check before larger
-            projects.
-          </p>
-          <p class="tech-used">Python · Fundamentals</p>
-          <a class="card-link"
-             href="https://github.com/Shaheer12345678/Lab-1-python-refresher"
              target="_blank">View on GitHub</a>
         </article>
       </div>
